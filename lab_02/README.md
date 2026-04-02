@@ -50,28 +50,7 @@
 
 ---
 
-## Часть 1. Анализ HTTP-запросов
-
-Был выполнен POST-запрос к тестовому API:
-
-```bash
-curl -i -X POST https://reqres.in/api/users \
--H "Content-Type: application/json" \
--d '{"name": "Anna", "job": "student"}'
-```
-
-Сервер вернул ответ со статусом:
-
-* **201 Created** — ресурс успешно создан
-
-В ответе также были возвращены дополнительные данные: идентификатор пользователя и время создания.
-
-📷 Скриншот выполнения запроса:
-![Скрин 1](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_1)
-
----
-
-## Часть 2. Реализация REST API на Flask
+## Часть 1. Реализация REST API на Flask
 
 Было разработано веб-приложение на Flask для управления списком товаров.
 
@@ -80,65 +59,6 @@ curl -i -X POST https://reqres.in/api/users \
 * `GET /api/products` — получение списка товаров
 * `GET /api/products/<id>` — получение товара по идентификатору
 * `POST /api/products` — добавление нового товара
-
----
-
-### Листинг кода приложения (app.py)
-
-```python
-from flask import Flask, jsonify, request
-
-app = Flask(__name__)
-
-products = [
-    {"id": 1, "name": "Milk", "price": 80, "stock": 10},
-    {"id": 2, "name": "Bread", "price": 50, "stock": 20}
-]
-
-next_id = 3
-
-
-@app.route('/api/products', methods=['GET'])
-def get_products():
-    return jsonify({"products": products})
-
-
-@app.route('/api/products/<int:product_id>', methods=['GET'])
-def get_product(product_id):
-    product = next((p for p in products if p["id"] == product_id), None)
-
-    if product:
-        return jsonify(product)
-
-    return jsonify({"error": "Product not found"}), 404
-
-
-@app.route('/api/products', methods=['POST'])
-def create_product():
-    global next_id
-
-    data = request.get_json()
-
-    if not data:
-        return jsonify({"error": "Invalid data"}), 400
-
-    new_product = {
-        "id": next_id,
-        "name": data.get("name"),
-        "price": data.get("price"),
-        "stock": data.get("stock")
-    }
-
-    products.append(new_product)
-
-    next_id += 1
-
-    return jsonify(new_product), 201
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
-```
 
 ---
 
@@ -151,7 +71,8 @@ curl http://127.0.0.1:5000/api/products
 ```
 
 📷 Скриншот:
-![Скрин 2](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_2)
+<img width="1811" height="822" alt="image" src="https://github.com/user-attachments/assets/1f0af296-a95d-4346-aa8f-632cd7e115cc" />
+
 
 ---
 
@@ -164,7 +85,8 @@ http://127.0.0.1:5000/api/products
 ```
 
 📷 Скриншот:
-![Скрин 3](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_3)
+<img width="1731" height="345" alt="image" src="https://github.com/user-attachments/assets/9a070204-f08f-4915-b101-97d7113e641d" />
+
 
 ---
 
@@ -175,7 +97,8 @@ curl http://127.0.0.1:5000/api/products
 ```
 
 📷 Скриншот:
-![Скрин 4](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_4)
+<img width="878" height="618" alt="image" src="https://github.com/user-attachments/assets/ade3aa13-cc5d-4a5d-9f48-537723abc1ad" />
+
 
 ---
 
@@ -186,11 +109,12 @@ curl http://127.0.0.1:5000/api/products/1
 ```
 
 📷 Скриншот:
-![Скрин 5](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_5)
+<img width="873" height="224" alt="image" src="https://github.com/user-attachments/assets/c26ccde2-a975-4cd7-a4ee-cea2a41ed6f8" />
+
 
 ---
 
-## Часть 3. Настройка Nginx
+## Часть 2. Настройка Nginx
 
 Был установлен и запущен веб-сервер nginx.
 
@@ -201,7 +125,7 @@ http://localhost
 ```
 
 📷 Скриншот:
-![Скрин 6](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_6)
+<img width="2770" height="620" alt="image" src="https://github.com/user-attachments/assets/f3d3e6d8-77bc-45b1-93d7-b5dd0a1a43d4" />
 
 ---
 
@@ -222,13 +146,9 @@ location /api/ {
     proxy_set_header X-Real-IP $remote_addr;
 }
 ```
-
-📷 Скриншот конфигурации:
-![Скрин config](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_CONFIG)
-
 ---
 
-## Часть 4. Тестирование системы
+## Часть 3. Тестирование системы
 
 Первый запрос через nginx:
 
@@ -243,7 +163,8 @@ X-Cache-Status: MISS
 ```
 
 📷 Скриншот:
-![Скрин 7](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_7)
+<img width="873" height="539" alt="image" src="https://github.com/user-attachments/assets/2d4ddafd-a1e6-48f1-9b3b-ac913e7f99f8" />
+
 
 ---
 
