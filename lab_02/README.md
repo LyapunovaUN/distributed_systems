@@ -46,6 +46,21 @@
 
 ---
 
+## Архитектура системы
+
+```mermaid
+graph LR
+
+User[Пользователь / curl] --> Nginx[Nginx (порт 80)]
+Nginx -->|proxy_pass| Flask[Flask API (порт 5000)]
+Flask --> Data[Список продуктов (в памяти)]
+
+Nginx --> Cache[Кеш nginx]
+Cache --> Nginx
+```
+
+---
+
 # Ход выполнения
 
 ---
