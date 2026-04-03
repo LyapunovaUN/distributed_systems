@@ -75,7 +75,8 @@ curl -i -X POST https://reqres.in/api/users \
 ```
 
 📷 Скриншот выполнения запроса:
-![Скрин 1](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_1)
+<img width="1707" height="1082" alt="image" src="https://github.com/user-attachments/assets/b4bbbfce-ad0a-42a8-bead-063997f489ff" />
+
 
 ---
 
