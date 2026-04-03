@@ -194,7 +194,8 @@ X-Cache-Status: MISS
 ```
 
 📷 Скриншот:
-<img width="870" height="830" alt="image" src="https://github.com/user-attachments/assets/aa4afe57-e4ad-4370-a02b-658539c3801f" />
+<img width="874" height="732" alt="image" src="https://github.com/user-attachments/assets/1fd134f2-4413-4221-8f3c-ea23cf6fe5a4" />
+
 
 
 
