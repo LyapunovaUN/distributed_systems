@@ -50,13 +50,17 @@
 
 ```mermaid
 flowchart LR
+    Client[Клиент<br>curl]
+    Nginx[Nginx<br>прокси + кеш\n200 на 2 минуты]
+    Flask[Flask API<br>Инвентарь продуктов]
+    Data[Данные в памяти]
 
-User[Пользователь / curl] --> Nginx[Nginx (порт 80)]
-Nginx -->|proxy_pass| Flask[Flask API (порт 5000)]
-Flask --> Data[Список продуктов (в памяти)]
-
-Nginx --> Cache[Кеш nginx]
-Cache --> Nginx
+    Client -->|запрос| Nginx
+    Nginx -->|proxy_pass| Flask
+    Flask --> Data
+    Data --> Flask
+    Flask -->|ответ| Nginx
+    Nginx --> Client
 ```
 
 ---
