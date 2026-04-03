@@ -49,7 +49,7 @@
 ## Архитектура системы
 
 ```mermaid
-graph LR
+flowchart LR
 
 User[Пользователь / curl] --> Nginx[Nginx (порт 80)]
 Nginx -->|proxy_pass| Flask[Flask API (порт 5000)]
