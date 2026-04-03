@@ -194,7 +194,8 @@ X-Cache-Status: MISS
 ```
 
 📷 Скриншот:
-<img width="873" height="539" alt="image" src="https://github.com/user-attachments/assets/2d4ddafd-a1e6-48f1-9b3b-ac913e7f99f8" />
+<img width="870" height="830" alt="image" src="https://github.com/user-attachments/assets/aa4afe57-e4ad-4370-a02b-658539c3801f" />
+
 
 
 ---
@@ -212,7 +213,8 @@ X-Cache-Status: HIT
 ```
 
 📷 Скриншот:
-![Скрин 8](ВСТАВИТЬ_ССЫЛКУ_НА_СКРИН_8)
+<img width="885" height="857" alt="image" src="https://github.com/user-attachments/assets/464469bc-7367-40f8-af7e-68a19b304d7c" />
+
 
 ---
 
