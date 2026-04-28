@@ -94,6 +94,8 @@ flowchart LR
 📷 Скриншот работы сервера:
 <img width="1437" height="142" alt="image" src="https://github.com/user-attachments/assets/b2aa84ff-ed93-4952-bc1b-09be3785cc70" />
 
+<img width="1428" height="212" alt="image" src="https://github.com/user-attachments/assets/47a64560-8ca4-4119-9ced-a74ded493751" />
+
 ---
 
 ## Часть 2. Развертывание RabbitMQ
@@ -122,7 +124,8 @@ docker-compose up -d
 ```
 
 📷 Скриншот веб-интерфейса RabbitMQ:
-(вставить [http://localhost:15672](http://localhost:15672))
+<img width="714" height="532" alt="image" src="https://github.com/user-attachments/assets/015a47fb-5c8e-47d0-b528-085d33fb8ed2" />
+
 
 ---
 
