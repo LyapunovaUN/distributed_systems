@@ -87,7 +87,7 @@ flowchart LR
 * генерация UUID
 * реверс строки
 
-После генерации кода был реализован[сервер](grpc_sync/grpc_server.py) и [клиент](grpc_sync/grpc_client.py) на Python.
+После генерации кода был реализован [сервер](grpc_sync/grpc_server.py) и [клиент](grpc_sync/grpc_client.py) на Python.
 
 Сервер обрабатывает входящие запросы и возвращает результат.
 
@@ -102,20 +102,8 @@ flowchart LR
 
 RabbitMQ был запущен с использованием Docker.
 
-[Файл конфигурации](rabbitmq_async/docker-compose.yml):
+[Файл конфигурации](rabbitmq_async/docker-compose.yml)
 
-```yaml
-version: '3.8'
-services:
-  rabbitmq:
-    image: rabbitmq:3-management
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-    environment:
-      - RABBITMQ_DEFAULT_USER=user
-      - RABBITMQ_DEFAULT_PASS=password
-```
 
 Запуск:
 
