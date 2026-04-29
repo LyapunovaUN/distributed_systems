@@ -81,7 +81,7 @@ flowchart LR
 
 ## Часть 1. Реализация gRPC сервиса
 
-Был создан файл контракта `service.proto`, в котором описаны методы:
+Был создан файл контракта (message_service.proto)[grpc_sync/message_service.proto], в котором описаны методы:
 
 * управление складом
 * генерация UUID
