@@ -123,7 +123,7 @@ services:
 docker-compose up -d
 ```
 
-📷 Скриншот веб-интерфейса RabbitMQ:
+📷 Скриншот RabbitMQ:
 <img width="714" height="532" alt="image" src="https://github.com/user-attachments/assets/015a47fb-5c8e-47d0-b528-085d33fb8ed2" />
 
 
@@ -149,6 +149,7 @@ python3 producer.py
 ```
 
 📷 Скриншот отправки сообщения
+<img width="1926" height="1136" alt="image" src="https://github.com/user-attachments/assets/e884646a-c770-4ba3-9071-74fe7cc40d58" />
 
 ---
 
@@ -163,66 +164,7 @@ Consumer получает сообщения из очереди и вызыва
 * `reverse` — переворот строки
 
 📷 Скриншот ожидания сообщений
-
----
-
-## Часть 5. Тестирование системы
-
----
-
-### Тест 1 — реверс строки
-
-```bash
-python3 producer.py
-```
-
-Результат в Consumer:
-
-```
-Получено: {'type': 'reverse', 'text': 'hello world'}
-Результат: dlrow olleh
-```
-
-📷 Скриншот
-
----
-
-### Тест 2 — генерация UUID
-
-```json
-{
-  "type": "uuid",
-  "text": "test"
-}
-```
-
-Результат:
-
-```
-Результат: 550e8400-e29b-41d4-a716-446655440000
-```
-
-📷 Скриншот
-
----
-
-### Тест 3 — управление запасами
-
-```json
-{
-  "type": "inventory",
-  "product_id": 1,
-  "sold": 5
-}
-```
-
-Результат:
-
-```
-Результат: 95
-```
-
-📷 Скриншот
+<img width="1926" height="1136" alt="image" src="https://github.com/user-attachments/assets/bce17efe-8154-4023-a03b-b3e113841889" />
 
 ---
 
