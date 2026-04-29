@@ -102,7 +102,7 @@ flowchart LR
 
 RabbitMQ был запущен с использованием Docker.
 
-Файл конфигурации:
+[Файл конфигурации](rabbitmq_async/docker-compose.yml):
 
 ```yaml
 version: '3.8'
@@ -131,7 +131,7 @@ docker-compose up -d
 
 ## Часть 3. Реализация Producer
 
-Producer отправляет сообщения в очередь RabbitMQ в формате JSON.
+[Producer](rabbitmq_async/producer.py) отправляет сообщения в очередь RabbitMQ в формате JSON.
 
 Пример отправки сообщения:
 
@@ -155,11 +155,10 @@ python3 producer.py
 
 ## Часть 4. Реализация Consumer
 
-Consumer получает сообщения из очереди и вызывает gRPC сервер для их обработки.
+[Consumer](rabbitmq_async/consumer.py) получает сообщения из очереди и вызывает gRPC сервер для их обработки.
 
 Обработка зависит от типа сообщения:
 
-* `inventory` — расчет остатка
 * `uuid` — генерация UUID
 * `reverse` — переворот строки
 
