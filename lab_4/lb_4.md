@@ -84,3 +84,10 @@ python server.py
 
 скрин работы 1 сервера
 <img width="1845" height="942" alt="image" src="https://github.com/user-attachments/assets/4fdc5aab-b0b4-4b53-8b46-cb47626f0d70" />
+скрин дашборд
+<img width="1629" height="696" alt="image" src="https://github.com/user-attachments/assets/d6391039-e356-47da-86e3-3c611965194b" />
+ответ от второго сервера
+<img width="1788" height="971" alt="image" src="https://github.com/user-attachments/assets/f3962882-b52f-4399-8c52-48743565a522" />
+и опять от первого
+<img width="1754" height="887" alt="image" src="https://github.com/user-attachments/assets/aae231cd-4a26-45f9-bb92-808fbc898f8d" />
+
