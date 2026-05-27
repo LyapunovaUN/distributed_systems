@@ -112,7 +112,7 @@ Hello
 
 Сервер успешно расшифровывает сообщение и возвращает ответ.
 
-
+<img width="1821" height="1023" alt="image" src="https://github.com/user-attachments/assets/4b03a5ef-d4c5-412f-b0d6-227b1cc24343" />
 
 Пример ответа:
 
