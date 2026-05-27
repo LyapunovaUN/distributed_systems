@@ -107,10 +107,12 @@ python3 client.py
 Клиент отправляет сообщение:
 
 ```text
-Hello secure system
+Hello
 ```
 
 Сервер успешно расшифровывает сообщение и возвращает ответ.
+
+
 
 Пример ответа:
 
@@ -130,6 +132,8 @@ Hello secure system
 2. Клиент повторно отправляет запрос
 3. Координатор автоматически переключается на Сервер 2
 4. Клиент получает успешный ответ
+
+<img width="1806" height="1037" alt="image" src="https://github.com/user-attachments/assets/3e8b650e-da74-4b48-b7f6-85b4f5951c08" />
 
 Пример логов координатора:
 
@@ -162,42 +166,14 @@ Success from https://localhost:5002
 http://127.0.0.1:8000/dashboard
 ```
 
+<img width="1512" height="850" alt="image" src="https://github.com/user-attachments/assets/1fd418b9-e436-45df-b594-e23d7c43f391" />
+
+
 Dashboard отображает:
 
 - статус серверов;
 - ONLINE/OFFLINE состояние;
 - последний ответ системы.
-
----
-
-# Скриншоты
-
-## Скриншот 1 — Успешный запрос
-
-Нужно показать:
-
-- терминал клиента;
-- терминал сервера;
-- успешный ответ системы.
-
-<img width="1845" height="942" alt="image" src="https://github.com/user-attachments/assets/4fdc5aab-b0b4-4b53-8b46-cb47626f0d70" />
-
----
-
-## Скриншот 2 — Dashboard
-
-Нужно показать:
-
-- страницу dashboard;
-- ONLINE статус серверов;
-- последний ответ системы.
-
-<img width="1629" height="696" alt="image" src="https://github.com/user-attachments/assets/d6391039-e356-47da-86e3-3c611965194b" />
-
-
-# Работа второго сервера и недоступном первом 
-
-<img width="1754" height="887" alt="image" src="https://github.com/user-attachments/assets/aae231cd-4a26-45f9-bb92-808fbc898f8d" />
 
 ---
 
