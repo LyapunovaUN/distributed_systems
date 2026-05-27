@@ -24,17 +24,6 @@
 
 ---
 
-# Используемые технологии
-
-- Ubuntu / WSL
-- Python 3.8+
-- Flask
-- requests
-- cryptography
-- OpenSSL
-
----
-
 # Архитектура системы
 
 ```mermaid
