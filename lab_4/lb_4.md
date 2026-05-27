@@ -37,12 +37,24 @@
 
 # Архитектура системы
 
-Система состоит из следующих компонентов:
+```mermaid
+flowchart LR
 
-- Клиент
-- Координатор (Load Balancer)
-- Сервер 1
-- Сервер 2
+    Client[Клиент]
+    Coordinator[Координатор<br/>Load Balancer<br/>Порт 8000]
+
+    Server1[Сервер 1<br/>HTTPS + mTLS<br/>Порт 5001]
+    Server2[Сервер 2<br/>HTTPS + mTLS<br/>Порт 5002]
+
+    Dashboard[Web Dashboard<br/>/dashboard]
+
+    Client -->|HTTP запрос<br/>Fernet encrypted| Coordinator
+
+    Coordinator -->|HTTPS + mTLS| Server1
+    Coordinator -->|HTTPS + mTLS| Server2
+
+    Coordinator -->|мониторинг| Dashboard
+```
 
 Клиент отправляет запрос координатору.  
 Координатор перенаправляет запрос на доступный сервер.  
