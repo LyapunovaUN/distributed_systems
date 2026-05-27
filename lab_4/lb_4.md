@@ -30,7 +30,7 @@
 flowchart LR
 
     Client[Клиент]
-    Coordinator[Координатор<br/>Load Balancer<br/>Порт 8000]
+    Coordinator[Координатор<br/><br/>Порт 8000]
 
     Server1[Сервер 1<br/>HTTPS + mTLS<br/>Порт 5001]
     Server2[Сервер 2<br/>HTTPS + mTLS<br/>Порт 5002]
