@@ -35,6 +35,7 @@ User --> Web
 Web --> Redis
 Redis --> Web
 Web --> User
+```
 
 ## Описание архитектуры
 
@@ -54,6 +55,7 @@ Redis хранит значение счетчика в памяти и сохр
 cd ~/Downloads/lab_5
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ## Установка зависимостей
 
@@ -66,6 +68,7 @@ pip install flask redis
 Терминал 1 — запуск Redis
 sudo service redis-server start
 redis-cli ping
+```
 
 Ожидаемый результат:
 
